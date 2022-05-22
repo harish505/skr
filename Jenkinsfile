@@ -63,9 +63,9 @@ pipeline {
 
     stage('Push to DockerHub') {
       steps {
-        sh 'docker tag skr-college-img:latest narendra8686/skr-college-img:latest'
+        sh 'docker tag skr-college-img:latest harish505/skr-college-img:latest'
         sh 'echo $DOCKERHUB_CREDENTIALS_PSW | docker login -u $DOCKERHUB_CREDENTIALS_USR --password-stdin'
-        sh 'docker push narendra8686/skr-college-img:latest'
+        sh 'docker push harish505/skr-college-img:latest'
       }
     }
 
@@ -75,7 +75,7 @@ pipeline {
   }
   environment {
     DOCKERHUB_CREDENTIALS = credentials('DockerAuth')
-    TESTER = 'Nani'
+    TESTER = 'hari'
     BUILD_ID = '1.0.0'
   }
 }
