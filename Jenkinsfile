@@ -5,7 +5,7 @@ pipeline {
       parallel {
         stage('Checkout SCM') {
           steps {
-            git(url: 'https://github.com/Narendrakaduru/SKRcollege.git', credentialsId: 'GitAuth', branch: 'main')
+            git(url: 'https://github.com/harish505/skr.git', credentialsId: 'GitAuth', branch: 'main')
           }
         }
 
